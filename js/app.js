@@ -1,7 +1,7 @@
 $(document).ready(function(){
 	for (var myNumber = 1; myNumber < 100; myNumber++) 
 	   if (((myNumber/3)%1===0)&&((myNumber/5)%1)===0){
-	   	document.write("fizz-buzz"+"<br>");
+	   	document.write("fizzbuzz"+"<br>");
 	   }
 	   	else if (((myNumber/3)%1)===0){
 	   	document.write("fizz" +"<br>");
