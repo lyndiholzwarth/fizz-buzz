@@ -16,7 +16,11 @@ $(document).ready(function(){
 		var max = prompt("Please try again. How high should I FizzBuzz?")
 	}
 
-	//run fizzbuzz//
+	//can this be looped to recheck?//
+
+
+
+	// then run fizzbuzz//
 	else if (max % 1 ==0){
 		for (var myNumber = 1; myNumber <=max; myNumber++) 
 		   if (((myNumber%3)===0)&&((myNumber%5)===0)){
