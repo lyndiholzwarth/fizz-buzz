@@ -1,39 +1,75 @@
 $(document).ready(function(){
-	var max = prompt("How high should I FizzBuzz? Please supply a number");
+	var max;
+	var maxNumber = false;
 	console.log(Number(max))
 	
-	//check if number//
-	if (isNaN(max)==true){
-		console.log("not a number")
-		alert("Sorry, I need a real number.")
-		var max = prompt("Please try again. How high should I FizzBuzz?")
+	while(!maxNumber)
+	{
+		var max = prompt("How high should I FizzBuzz? Please supply a number");
+		
+		//check if number
+		if (isNaN(max)==true){
+			console.log("not a number");
+			alert("Sorry, I need a real number. Please try again.");
+			maxNumber= false;
+		}
+
+		//test for decimal
+		else if (max % 1 != 0){
+			console.log("decimal");
+			alert("Sorry, I need a whole number. Please try again.");
+			maxNumber=false;
+		}
+
+		else if (max==0){
+			console.log("Zero!");
+			alert("Counting to zero is no fun. Please try again.");
+			maxNumber=false;
+		}
+
+		else if (max<0){
+			console.log("It's negative");
+			alert("Let's count UP. Please try again.");
+			maxNumber=false;
+		}
+	
+	// then run fizzbuzz
+		else maxNumber=true;
+
 	}
-
-	//test for decimal//
-	if (max % 1 != 0){
-		console.log("decimal")
-		alert("Sorry, I need a whole number.")
-		var max = prompt("Please try again. How high should I FizzBuzz?")
-	}
-
-	//can this be looped to recheck?//
-
-
-
-	// then run fizzbuzz//
-	else if (max % 1 ==0){
-		for (var myNumber = 1; myNumber <=max; myNumber++) 
-		   if (((myNumber%3)===0)&&((myNumber%5)===0)){
-		   	document.write("fizzbuzz"+"<br>");
-		   }
-		   	else if ((myNumber%3)===0){
-		   	document.write("fizz" +"<br>");
-		   }
-		   else if ((myNumber%5)===0){
-		   	document.write("buzz" +"<br>");
-		   }
-		   else {
-		   	document.write(myNumber+"<br> ");
-		    } ;  
-	}
+	console.log("Yay!")
+		//	(max % 1 ==0){
+			for (var myNumber = 1; myNumber <=max; myNumber++) 
+			   if (((myNumber%3)===0)&&((myNumber%5)===0)){
+			   	document.write("fizzbuzz"+"<br>");
+			   }
+			   	else if ((myNumber%3)===0){
+			   	document.write("fizz" +"<br>");
+			   }
+			   else if ((myNumber%5)===0){
+			   	document.write("buzz" +"<br>");
+			   }
+			   else {
+			   	document.write(myNumber+"<br> ");
+			    } ;  
+		
 });
+
+
+/*var userInput;
+var userInputIsCorrect = false;
+
+while(!userInputIsCorrect)
+{
+    userInput = prompt('Enter a number between 0 and 100');
+    if(userInput >= 0 && userInput <=100)
+    {
+        userInputIsCorrect = true;
+    }
+    else
+    {
+        alert('You didn\'t enter a value between 0 and 100 – please try again.');
+        userInputIsCorrect = false;
+    }
+}
+alert('Thank you for inputting a value between 0 and 100.');*/
