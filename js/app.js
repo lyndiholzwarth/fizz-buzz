@@ -54,22 +54,3 @@ $(document).ready(function(){
 			    } ;  
 		
 });
-
-
-/*var userInput;
-var userInputIsCorrect = false;
-
-while(!userInputIsCorrect)
-{
-    userInput = prompt('Enter a number between 0 and 100');
-    if(userInput >= 0 && userInput <=100)
-    {
-        userInputIsCorrect = true;
-    }
-    else
-    {
-        alert('You didn\'t enter a value between 0 and 100 – please try again.');
-        userInputIsCorrect = false;
-    }
-}
-alert('Thank you for inputting a value between 0 and 100.');*/
